@@ -19,7 +19,6 @@ npm install --save styled-components
 
 yarn add styled-components
 
-====== HHHHHHHHHHHHHHHH==============HHHHHHHHHHHHHHHHHHHHHHHH====================HHHHHHHHHHHHHHHHHHHHH===============
 
 # REACT NAVIGATION INICIANDO ....
 
