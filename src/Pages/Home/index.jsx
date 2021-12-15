@@ -25,6 +25,8 @@ export function Home(){
   const [ isloading, setIsLoading] =useState(true);
   const [ bannerMovie, setBannerMovie] = useState({});
 
+  const [ searchInput, setSearchInput ] = useState("");
+
   //buscar todos filmes quando componente for montado
   useEffect( ()=> {
     let isActive = true;
@@ -87,6 +89,18 @@ function handleNavigationDetails(item){
 
 //pegando dados que usuário digitar no input
 
+//função que irá fazer a buscar
+function handleSearchMovie(){
+  //verificando se usuário digitou alguma coisa
+  if(searchInput === ""){
+    alert("Prencha alguma nome para prosseguir!");
+    return;
+  }
+  navigation.navigate("Search", { name: searchInput});
+  setSearchInput('');
+  console.log(searchInput)
+}
+
   if(isloading){
    return(
     <ContainerIsloading>
@@ -105,9 +119,11 @@ function handleNavigationDetails(item){
         <Input 
           placeholder="Ex Vigandores"
           placeholderTextColor="#dedede"
+          value={searchInput}
+          onChangeText={(text)=>setSearchInput(text) }
         />
 
-        <SearchButton>
+        <SearchButton onPress={ ()=> handleSearchMovie()}>
           <Feather 
             name="search"
             size={ 30 }
