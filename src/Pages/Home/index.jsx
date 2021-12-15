@@ -85,6 +85,8 @@ function handleNavigationDetails(item){
   navigation.navigate("Detalhes", { id: item.id})
 }
 
+//pegando dados que usuário digitar no input
+
   if(isloading){
    return(
     <ContainerIsloading>
@@ -97,7 +99,7 @@ function handleNavigationDetails(item){
   }
   return(
     <Container>
-      <Header title="React-Prime"/>
+      <Header title="Cine-Prime"/>
 
       <SearchContainer>
         <Input 

@@ -5,6 +5,8 @@ export const Container = styleds.View`
   flex-direction: row;
   align-items: center;
   paddingLeft: 14px;
+  marginTop: 30px;
+  marginBottom: 16px;
 `;
 export const MenuButton = styleds.TouchableOpacity`
   height: 70px;
